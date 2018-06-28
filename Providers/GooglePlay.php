@@ -1,6 +1,6 @@
 <?php
 namespace Phpsocialauth\Providers;
-use Phpsocialauth\Interfaces;
+use Phpsocialauth\Interfaces\IAuthProvider;
 
 class GooglePlay implements IAuthProvider
 {
@@ -8,7 +8,7 @@ class GooglePlay implements IAuthProvider
     protected $client = null;
     protected $client_id = null; //sub
         
-    protected static function init($config) {
+    protected static function init($config = []) {
         return new static($config);
     }
 

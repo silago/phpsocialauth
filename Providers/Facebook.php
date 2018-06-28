@@ -1,6 +1,6 @@
 <?php
 namespace Phpsocialauth\Providers;
-use Phpsocialauth\Interfaces;
+use Phpsocialauth\Interfaces\IAuthProvider;
 
 class Facebook implements IAuthProvider
 {
@@ -18,7 +18,7 @@ class Facebook implements IAuthProvider
         }
     }
 
-    public function getUserId(array $auth_data = null): ? string
+    public function getUserId($auth_data = []) 
     {
         $token = $auth_data['token'];
         return $this->getFBId($token);

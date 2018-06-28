@@ -3,6 +3,6 @@ namespace Phpsocialauth\Interfaces;
 
 interface IAuthProvider
 {
-    public function getUserId(array $auth_data = null): ? string;
-    public static function init(array $auth_data = []): IAuthProvider;
+    public function getUserId($auth_data = [] );
+    public static function init($auth_data = []);
 }

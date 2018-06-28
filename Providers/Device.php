@@ -1,16 +1,18 @@
 <?php
-/**
- * @author Alexandr Budko <alexandr.budko@gmail.com>
- * @date   14.05.2018 16:18
- */
-
-namespace Stark\Perf\Service\Auth\Providers;
-
-use Stark\Perf\Service\Auth\Interfaces\IAuthProvider;
+namespace Phpsocialauth\Providers;
+use Phpsocialauth\Interfaces\IAuthProvider;
 
 class Device implements IAuthProvider
 {
-    public static function getUserId(array $auth_data = null): ? string
+    protected static function init($config = []) {
+        return new static($config);
+    }
+
+    protected function __construct($config = [])
+    {
+    } 
+
+    public function getUserId($auth_data = []) 
     {
         return '0';
     }

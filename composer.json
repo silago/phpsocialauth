@@ -1,0 +1,10 @@
+{
+    "name": "silago/phpsocialauth",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Phpsocialauth\\": "./"
+        }
+    },
+    "minimum-stability": "stable"
+}

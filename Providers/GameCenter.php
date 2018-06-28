@@ -1,6 +1,6 @@
 <?php
 namespace Phpsocialauth\Providers;
-use Phpsocialauth\Interfaces;
+use Phpsocialauth\Interfaces\IAuthProvider;
 
 class GameCenter implements IAuthProvider
 {
@@ -16,7 +16,7 @@ class GameCenter implements IAuthProvider
 
     }
 
-    public function getUserId(array $auth_data = null): ? string
+    public function getUserId($auth_data = [])
     {
         $playerId  = $auth_data['playerId'];
         $timestamp = $auth_data['timestamp'];
